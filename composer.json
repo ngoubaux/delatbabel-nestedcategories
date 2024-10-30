@@ -17,7 +17,7 @@
         "ngoubaux/delatbabel-fluents": "^11.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "^9.4|^10.1"
     },
     "autoload": {
         "psr-4": {

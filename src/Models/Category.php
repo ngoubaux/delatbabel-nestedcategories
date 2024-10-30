@@ -35,7 +35,7 @@ class Category extends Node
         'extended_data'     => 'array',
     ];
 
-    public function sluggable()
+    public function sluggable(): array
     {
         return [
             'slug' => [

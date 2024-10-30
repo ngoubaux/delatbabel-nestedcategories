@@ -18,8 +18,8 @@ class CreateCategoriesTable extends Migration
             // Column names may be changed, but they *must* all exist and be modified
             // in the model.
             // Take a look at the model scaffold comments for details.
-            $table->increments('id');
-            $table->integer('parent_id')->nullable()->index();
+            $table->id();
+            $table->unsignedBigInteger('parent_id')->nullable()->index();
             $table->integer('lft')->nullable()->index();
             $table->integer('rgt')->nullable()->index();
             $table->integer('depth')->nullable();
@@ -29,7 +29,7 @@ class CreateCategoriesTable extends Migration
             $table->string('name', 255);
             $table->string('slug', 255)->unique();
             $table->longText('description');
-            $table->longText('extended_data');
+            $table->longText('extended_data')->nullable();
 
             $table->timestamps();
         });
